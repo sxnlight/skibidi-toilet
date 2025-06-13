@@ -1,1 +1,108 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skibidi Toilet Game</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: radial-gradient(circle at center, #111, #000);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .toilet-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://i.ibb.co/KVdWfDx/skibidi-toilet.png') center/contain no-repeat;
+      opacity: 0.05;
+      z-index: 0;
+    }
+
+    header {
+      background: #ff00ff;
+      padding: 1em;
+      text-align: center;
+      font-size: 2rem;
+      color: #fff;
+      text-shadow: 2px 2px #000;
+    }
+
+    .main {
+      z-index: 1;
+      position: relative;
+      text-align: center;
+      padding: 3em 1em;
+    }
+
+    .play-btn {
+      background: #00ffcc;
+      border: 4px solid #fff;
+      padding: 1em 2em;
+      font-size: 2rem;
+      border-radius: 20px;
+      color: #000;
+      cursor: pointer;
+      box-shadow: 0 0 20px #00ffcc;
+      transition: 0.3s;
+    }
+
+    .play-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px #ff00ff;
+    }
+
+    .game-info {
+      margin-top: 2em;
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: 1em;
+      background: rgba(0, 0, 0, 0.7);
+      font-size: 0.9rem;
+    }
+
+    /* Add some silly animation (Skibidi vibe) */
+    .toilet-dance {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: dance 1s infinite alternate;
+      background: url('https://i.ibb.co/KVdWfDx/skibidi-toilet.png') center/contain no-repeat;
+    }
+
+    @keyframes dance {
+      from { transform: translateX(-50%) rotate(-10deg); }
+      to { transform: translateX(-50%) rotate(10deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="toilet-bg"></div>
+  <header>🚽 Skibidi Toilet Showdown 🚽</header>
+
+  <div class="main">
+    <button class="play-btn">Play Now!</button>
+    <div class="game-info">
+      Survive the Skibidi invasion in this wacky, fast-paced mini-game!<br>
+      Face toilets with heads. Stay funky. Stay alive.
+    </div>
+  </div>
+
+  <div class="toilet-dance"></div>
+
+  <footer>© 2025 Skibidi Studios. Skibidi Dop Dop Yes Yes.</footer>
+</body>
+</html>
